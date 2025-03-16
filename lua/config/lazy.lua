@@ -21,6 +21,20 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
+-- Enable line numbers
+vim.opt.number = true
+
+-- Enable relative line numbers (optional)
+vim.opt.relativenumber = true
+
+vim.cmd('syntax on')
+
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
+vim.opt.clipboard:append("unnamedplus")
+
 -- Setup lazy.nvim
 require("lazy").setup({
     spec = {

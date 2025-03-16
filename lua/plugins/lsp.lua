@@ -23,6 +23,8 @@ return {
             lspconfig.lua_ls.setup {}
             lspconfig.angularls.setup {}
             lspconfig.ts_ls.setup {}
+            lspconfig.html.setup {}
+            lspconfig.tailwindcss.setup {}
 
 
             vim.keymap.set("n", "<A-F>", function() vim.lsp.buf.format() end)
