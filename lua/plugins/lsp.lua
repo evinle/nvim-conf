@@ -18,14 +18,26 @@ return {
         },
         config = function()
             require("mason").setup()
-            require("mason-lspconfig").setup()
-            local lspconfig = require("lspconfig")
-            lspconfig.lua_ls.setup {}
-            lspconfig.angularls.setup {}
-            lspconfig.ts_ls.setup {}
-            lspconfig.html.setup {}
-            lspconfig.tailwindcss.setup {}
+            local mason_lspconfig = require("mason-lspconfig")
 
+            mason_lspconfig.setup {
+                automatic_installation = true,
+                ensure_installed = { 'angularls', 'html', 'ts_ls', 'lua_ls' }
+            }
+
+            local lspconfig = require("lspconfig")
+
+            mason_lspconfig.setup_handlers {
+                function(server)
+                    lspconfig[server].setup {}
+                end
+            }
+
+            -- lspconfig.lua_ls.setup {}
+            -- lspconfig.angularls.setup {}
+            -- lspconfig.ts_ls.setup {}
+            -- lspconfig.html.setup {}
+            -- lspconfig.tailwindcss.setup {}
 
             vim.keymap.set("n", "<A-F>", function() vim.lsp.buf.format() end)
         end,
