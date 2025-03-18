@@ -32,7 +32,8 @@ return {
                 -- javaScriptMember = { fg = "#ffffff" }
                 -- typescriptObjectLiteral = { fg = "#ffffff"},
                 --     typescriptObjectLabel = { fg = "#ffffff"}
-                ["@lsp.type.property.typescript"] = { link = "NeofusionWhite" }
+                ["@lsp.type.property.typescript"] = { link = "NeofusionWhite" },
+                ["@keyword"] = { link = "NeofusionWhite"}
             },
             dim_inactive = true,
             transparent_mode = true,
