@@ -35,6 +35,13 @@ vim.opt.expandtab = true
 
 vim.opt.clipboard:append("unnamedplus")
 
+vim.opt.shell        = 'pwsh.exe'
+vim.opt.shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command'
+vim.opt.shellquote   = '\"'
+vim.opt.shellxquote  = ''
+vim.opt.shellpipe    = '| Out-File -Encoding UTF8 %s'
+vim.opt.shellredir   = '| Out-File -Encoding UTF8 %s'
+
 -- Setup lazy.nvim
 require("lazy").setup({
     spec = {
