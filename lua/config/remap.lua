@@ -3,10 +3,16 @@ vim.keymap.set("n", "<leader>i", "<CMD>Lazy<cr>")
 vim.keymap.set("n", "<leader>l", "<CMD>Mason<cr>")
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
 vim.keymap.set("n", "<leader>w", "<C-w>")
+
+-- LSP
 vim.keymap.set('n', 'grn', vim.lsp.buf.rename)
 vim.keymap.set('n', 'gra', vim.lsp.buf.code_action)
 vim.keymap.set('n', 'grr', "<CMD>Telescope lsp_references<cr>")
 vim.keymap.set('i', '<C-s>', vim.lsp.buf.signature_help)
+vim.keymap.set('i', '<C-s>', vim.lsp.buf.signature_help)
+
+-- Neogit
+vim.keymap.set('n', '<leader>gg', "<CMD>Neogit type=split<cr>")
 
 vim.api.nvim_create_user_command('SwitchAngularComponentViewForward', function()
     local ext = vim.fn.expand("%:e")
