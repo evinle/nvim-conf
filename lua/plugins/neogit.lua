@@ -8,9 +8,6 @@ return { {
     config = true,
     opts = {
         disable_line_numbers = false,
-        integrations = {
-            telescope = true
-        },
-        kind = "split"
+        process_spinner = true,
     }
 } }

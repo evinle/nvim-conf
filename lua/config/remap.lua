@@ -3,6 +3,8 @@ vim.keymap.set("n", "<leader>i", "<CMD>Lazy<cr>")
 vim.keymap.set("n", "<leader>l", "<CMD>Mason<cr>")
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
 vim.keymap.set("n", "<leader>w", "<C-w>")
+vim.keymap.set("n", "<leader><Tab>", "gt")
+vim.keymap.set("n", "<leader><S-Tab>", "gT")
 
 -- LSP
 vim.keymap.set('n', 'grn', vim.lsp.buf.rename)
