@@ -1,10 +1,16 @@
 vim.keymap.set("n", "<leader>o", require("oil").open)
 vim.keymap.set("n", "<leader>i", "<CMD>Lazy<cr>")
 vim.keymap.set("n", "<leader>l", "<CMD>Mason<cr>")
-vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
 vim.keymap.set("n", "<leader>w", "<C-w>")
 vim.keymap.set("n", "<leader><Tab>", "gt")
 vim.keymap.set("n", "<leader><S-Tab>", "gT")
+
+-- Terminal
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
+vim.keymap.set({ "n", "i", "t" }, "<A-h>", "<C-\\><C-N><C-w>h")
+vim.keymap.set({ "n", "i", "t" }, "<A-j>", "<C-\\><C-N><C-w>j")
+vim.keymap.set({ "n", "i", "t" }, "<A-k>", "<C-\\><C-N><C-w>k")
+vim.keymap.set({ "n", "i", "t" }, "<A-l>", "<C-\\><C-N><C-w>l")
 
 -- LSP
 vim.keymap.set('n', 'grn', vim.lsp.buf.rename)
