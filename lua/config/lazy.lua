@@ -35,7 +35,14 @@ vim.opt.expandtab = true
 
 vim.opt.clipboard:append("unnamedplus")
 
-vim.opt.shell        = 'pwsh.exe'
+if vim.fn.executable("pwsh.exe") == 1 then
+    vim.opt.shell = "pwsh.exe"
+else
+    if vim.fn.executable("powershell.exe") == 1 then
+        vim.opt.shell = "powershell.exe"
+    end
+end
+
 vim.opt.shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command'
 vim.opt.shellquote   = '\"'
 vim.opt.shellxquote  = ''
