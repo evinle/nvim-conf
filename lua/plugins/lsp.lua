@@ -39,7 +39,7 @@ return {
             -- lspconfig.html.setup {}
             -- lspconfig.tailwindcss.setup {}
 
-            vim.keymap.set("n", "<A-F>", function() vim.lsp.buf.format() end)
+            vim.keymap.set("n", "<leader>q", function() vim.lsp.buf.format() end)
         end,
     }
 }
