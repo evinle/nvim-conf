@@ -26,6 +26,7 @@ vim.opt.number = true
 
 -- Enable relative line numbers (optional)
 vim.opt.relativenumber = true
+vim.opt.wrap = false
 
 vim.cmd('syntax on')
 
