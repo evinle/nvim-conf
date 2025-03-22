@@ -5,7 +5,7 @@ return { {
         local git_blame = require('gitblame')
 
         require('lualine').setup {
-            options = { theme = require("neofusion.lualine") },
+            -- options = { theme = require("neofusion.lualine") },
             sections = {
                 lualine_a = {
 
