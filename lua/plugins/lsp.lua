@@ -22,7 +22,7 @@ return {
 
             mason_lspconfig.setup {
                 automatic_installation = true,
-                ensure_installed = { 'angularls', 'html', 'ts_ls', 'lua_ls' }
+                ensure_installed = { 'angularls', 'html', 'tsserver', 'lua_ls' }
             }
 
             local lspconfig = require("lspconfig")
