@@ -5,13 +5,14 @@ return { {
         local git_blame = require('gitblame')
 
         require('lualine').setup {
-            -- options = { theme = require("neofusion.lualine") },
             sections = {
                 lualine_a = {
                     'mode',
                 },
                 lualine_c = {
-                    { git_blame.get_current_blame_text, cond = git_blame.is_blame_text_available }
+                    {
+                        git_blame.get_current_blame_text, cond = git_blame.is_blame_text_available
+                    }
                 }
             }
         }
