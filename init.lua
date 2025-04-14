@@ -9,6 +9,7 @@ vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
 vim.cmd('hi TabLineFill guibg=NONE ctermbg=NONE')
 vim.cmd('hi TabLine guibg=NONE ctermbg=NONE')
 
-vim.api.nvim_set_hl(0, "WinBar", { bg = "none" })  -- If using WinBar for tabs
+vim.api.nvim_set_hl(0, "WinBar", { bg = "none" })
+vim.api.nvim_set_hl(0, "WinBarNC", { bg = "none" })
 vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
 vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "none" })
