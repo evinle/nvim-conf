@@ -5,7 +5,7 @@ return {
     },
     config = function()
         require("project_nvim").setup {
-            patterns = { "src", "package.json" },
+            patterns = { "src", "package.json", "PlanningAppsBackEnd.sln"},
             detection_methods = { "pattern" },
             slient_chdir = false
         }
