@@ -30,6 +30,12 @@ return {
                         ["<C-d>"] = actions.delete_buffer,
                     },
                 },
+                layout_config = {
+                    vertical = {
+                        width = 0.9, height = 0.7, prompt_position = 'top'
+                    }
+                },
+                layout_strategy = 'vertical'
             },
         })
     end
